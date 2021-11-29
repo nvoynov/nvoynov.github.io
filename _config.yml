@@ -21,7 +21,7 @@
 title: Rabbit Hole
 email: juniorrubydev@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Find a way beyond software development...
+  Looking for a way out of the burrow of software development
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
@@ -33,6 +33,14 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
+
+# Site settings
+permalink: /:title/
+# markdown: kramdown
+paginate: 3
+paginate_path: "/:num/"
+date_format: "%b %-d, %Y"
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
