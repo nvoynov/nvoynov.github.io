@@ -1,3 +1,5 @@
+
+
 Cleon I
 
 > Then, just before the Earth project, a whole new approach to customers' relations began to shape itself in my mind. I found myself muttering to myself, "Form follows function." I liked the way it sounded. But then I would ask myself, "*Why* must form follow function?" And the reason I gave myself was, "Form follows function because that is an immutable law of nature and one of the fundamental axioms of applied science." And I liked the sound of that, too, although it didn't make much sense.
