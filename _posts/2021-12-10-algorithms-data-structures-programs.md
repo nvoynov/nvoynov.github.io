@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Algorithms + Data Structures = Programs"
-date:   2021-11-29 12:49:47 +0200
+date:   2021-12-10 12:49:47 +0200
 ---
 
 I think some software developers are familiar with this formula, and perhaps the book of the same name that was published in l975. I'm not sure if the "Program" concept even exists today in up-to-date software engineering, but I think the formula is still a perfect point to start this post.
