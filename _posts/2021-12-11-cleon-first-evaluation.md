@@ -62,7 +62,7 @@ end
 
 ## Gateway and Testing
 
-To test the domain service behavior one needs a data source. For the domain itself, it is too early to choose certain data storage. At the same time, it is exactly the time to shape the [interface of future storage](https://github.com/nvoynov/cleon-users/blob/master/lib/users/gateways/gateway.rb). And when it is shaped (as your domain services require), you can provide [the simplest in memory gateway implementation](https://github.com/nvoynov/cleon-users/blob/master/test/services/memory_gateway.rb) for testing purposes; hash-based in this case. It's also helpful to base on Hash because you can easily turn it into the PStore persistent storage just by wrapping the code into the `PStore#transaction` block.
+To test the domain service behavior one needs a data source. For the domain itself, it is too early to choose certain data storage. At the same time, it is exactly the time to shape the [interface of future storage](https://github.com/nvoynov/cleon-users/blob/master/lib/users/gateways/gateway.rb).
 
 ## ArgChckr
 
@@ -98,3 +98,9 @@ def create_user(name:, email:, password:)
     name: name, email: email, password: password)
 end
 ```
+
+## PS. 2021-12-18
+
+From the beginning, to test services I used an in-memory gateway. But a couple of days ago, I finally figured out the mocks and stubs, and then utilized them for testing. Thus, the memory_gateway.rb became redundant and was removed from test of the domain. And besides, I began "to assert" instead of "to expect" in test code that seems more clear and natural.
+
+Curiously, SelectUsers was the last service that I rewrote tests for. In fact, it simply passes parameters from the client to the gateway, after which it sends the gateway response to the client. I think this is quite an illustration of CQRS! Just see the last version of [select_users_spec](https://github.com/nvoynov/cleon-users/blob/master/test/services/select_users_spec.rb), it's a bit ridiculous, isn't it? And here I concluded, that at the business logic layer for any kind of gateways I will create only their interfaces and no implementations for test purposes - mock and stubs serve perfect for this layer.
