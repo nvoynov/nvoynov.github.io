@@ -2,57 +2,90 @@
 
 .site-header {
   display: flex;
-  flex-direction: column; /* Stack logo and navigation vertically */
-  align-items: center;    /* Center horizontally */
+  flex-direction: column; 
+  align-items: center;    
   text-align: center;
-  margin-top: 3.75rem;     /* 60px / 16 */
-  padding-bottom: 2.5rem;  /* 40px / 16 — Breathable space above the divider line */
-  border-bottom: 1px solid #eeeeee;
+  margin-top: 3.75rem;     
+  padding-bottom: 2.5rem;  
+  border-bottom: 1px dashed #cccccc;
 }
 
-/* Scoped selector matching our structural brand title anchor */
+/* Micro graphic styling for our custom terminal prompt icon */
+.header-divider-icon {
+  height: 1.1rem;          /* Scaled perfectly to match the font size of the title */
+  width: 1.1rem;           /* Fixed aspect ratio for retinian sharpness */
+  vertical-align: middle;
+  margin-right: 0.65rem;   /* Precise structural gap before the name */
+  margin-top: -2px;        /* Optical alignment correction for monospace baseline */
+  display: inline-block;
+}
+
+/* Master site title: increased scale to absolute priority */
 .site-title .site-title-text {
-  font-size: 1.35rem;     /* Slightly increased from 1.25rem for balanced weight */
-  font-weight: 300;       
-  letter-spacing: 0.22em; 
-  text-transform: uppercase;
-  margin: 0 0 1.875rem 0;  
-  line-height: 1;
+  font-family: "Courier New", Courier, monospace; 
+  font-size: 1.25rem;      /* Increased from 1.15rem to dominate the content layer */
+  font-weight: 700;        
+  letter-spacing: 0;        
+  text-transform: none;     
+  color: #000000;          
+  margin: 0 0 1.25rem 0;   
+  line-height: 1.2;
   display: inline-block;
 }
 
 .site-title a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   color: #222222;
   text-decoration: none;
 }
 
-/* Micro graphic styling for our custom embedded pixel matrix logo */
-.header-divider-icon {
-  height: 1.25rem;         /* 20px proportional matching to the title scale */
-  vertical-align: middle;
-  margin-right: 0.5rem;    /* Clean tracking gap before the text */
+.site-title a:hover {
+  color: #2c3e50; /* Мягкое подсвечивание при наведении */
 }
 
+/* Навигация: одна сплошная CLI-линия */
 .site-nav {
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 2.5rem;             /* 40px / 16 — Crisp horizontal menu gaps */
-  margin-top: 0.3125rem;   /* 5px / 16 */
+  font-family: "Courier New", Courier, monospace;
 }
 
+/* Приглашение % [ и закрывающая ] скобка */
+.site-nav .nav-prompt,
+.site-nav .nav-bracket {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #888888;          /* Тусклый цвет для служебных символов */
+  user-select: none;       
+}
+
+/* Точечные, плотные отступы */
+.site-nav .nav-prompt {
+  margin-right: 0.75rem;   /* Скобка стоит близко к первой команде */
+}
+
+.site-nav .nav-bracket {
+  margin-left: 0.25rem;    /* Прижимаем закрывающую скобку после убранного маргина */
+}
+
+/* Команды-ссылки в меню */
 .site-nav a {
-  font-size: 0.75rem;      /* 12px / 16 — Neat typographic scale for navigation links */
-  font-weight: 400;       
-  letter-spacing: 0.28em; 
-  text-transform: uppercase;
-  color: #444444;         /* Matches our system fallback color schema */
+  font-size: 1.1rem;       /* Размер в тон приглашению */
+  font-weight: bold;       
+  letter-spacing: 0;
+  text-transform: lowercase; /* Строго нижний регистр */
+  color: #222222;         
   text-decoration: none;
-  transition: color 0.2s ease;
+  margin-right: 1.25rem;   /* Ровный шаг между командами */
+  transition: color 0.15s ease;
+}
+
+/* Убираем маргин у последней ссылки, чтобы ] встала вплотную */
+.site-nav a:last-of-type {
+  margin-right: 0;
 }
 
 .site-nav a:hover {
-  color: #000000;
+  color: #2c3e50;
+  background-color: #e5e5e5; /* Эффект выделения текста курсором при наведении */
 }

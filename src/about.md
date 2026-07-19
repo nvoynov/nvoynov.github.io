@@ -1,34 +1,38 @@
 ---
-title: About & Manifesto
+title: "About"
+subtitle: "The Trajectory of a Systems Engineer"
+date: "July 2026"
 ---
 
-::: {.about-page-container}
+# About the Site
 
-# RAWWW Manifesto
+This website is a space for structural reflection. It is an ongoing attempt to contemplate a 20-year journey through the software engineering industry—a trajectory that has come full circle. 
 
-> "The web is bloated. Let's make it raw again."
-
-**RAWWW** is a philosophical pushback against the modern web infrastructure. We believe that building a fast, accessible, and beautiful website should not require a 500MB `node_modules` folder, complex hydration strategies, or fragile JavaScript compilation steps.
-
-We build websites like we shoot photographs: in **RAW format**. We keep the raw data clean, unmodified, and honest, compiling it directly into the final presentation without unnecessary compression of thought.
-
-## Core Principles
-
-1. **Content First**: Your site exists to deliver text, images, and data. Everything else is secondary. Pandoc Markdown keeps your core content portable, indestructible, and human-readable.
-2. **Predictable Automation**: Heavy frameworks abstract too much. We use Ruby and Rake because they are transparent, fast, and time-tested. One file, clear rules, instant execution.
-3. **Zero JavaScript Overhead**: The fastest script is the one that never loads. Interactions should rely on modern CSS. JavaScript is treated as a progressive enhancement, never a dependency.
-4. **Environment Isolation**: No more "it works on my machine." A single container file covers your complete toolchain—Ruby, Rake, and Pandoc. Build locally, run anywhere.
-
-## The Toolchain
-
-This starter kit is deliberately minimal, utilizing tools that built the modern internet and continue to outlast temporary tech trends:
-
-* **Pandoc**: The ultimate document converter, giving you unparalleled Markdown power.
-* **Ruby & Rake**: Elegant scripting and clean task management for asset pipeline orchestration.
-* **Docker/Podman**: Production-ready environment immutability.
+My career was built in three distinct acts: the first third was dedicated to core programming, the second was focused deeply on system and business analysis, and the final third marks a deliberate return to the tangible, focused craftsmanship of backend construction.
 
 ---
 
-*This site was built from a raw state. Feel free to delete this manifesto, replace the branding, and start writing your own story.*
+# Synergy & Collaboration
 
-:::
+> "If you have an ambiguous, multi-layered problem that requires both rigorous system thinking and clean code execution, we might find a unique synergy."
+
+I operate best in environments that value autonomy over alignment and outcomes over checklists. 
+
+*   **The Right Fit:** I am highly effective when brought in to untangle complex domain logic, isolate volatile business rules, or design problem domain from scratch. I thrive when granted the professional autonomy to make architectural decisions and own my delivery schedule.
+*   **The Wrong Fit:** If your project requires a predictable corporate unit to fill a standard, rigid checklist box within an over-managed process, I am simply not the right guy for the job.
+
+If you have a challenge that matches this mindset, let's start a conversation.
+
+*   **GitHub:** [nvoynov](https://github.com/nvoynov)
+*   **Digital Outpost:** [nvoynov.github.io](https://nvoynov.github.io)
+*   **Secure Channel:** nvoynov@gmail.com
+
+---
+
+# Internal Infrastructure
+
+To understand more about the principles and history behind this outpost, explore the dedicated sections:
+
+*   **[My Engineering Approach](my-engineering-approach.html)** &mdash; The core framework: building what matters, building it right, and executing with sanity.
+*   **[My Engineering Story](story.html)** &mdash; A retrospective on twenty years of software development, from client-server monoliths to event-driven distributed systems.
+*   **[Meditations: Form Follows Function](form-follows-function.html)** &mdash; Short reflections on architectural blueprints, Niklaus Wirth's axioms, and the ancestral ECB pattern. *(Protected from search index)*

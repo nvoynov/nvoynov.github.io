@@ -5,21 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Standard Primary SEO Layer -->
-  <title>$if(title)$$title$ | RAWWW Engine$else$RAWWW Static Site$endif$</title>
+  <title>$if(title)$$title$ | Nikolay Voynov$else$Nikolay Voynov$endif$</title>
   $if(description)$<meta name="description" content="$description$">$endif$
   
   <!-- Absolute Canonical Anchor: Automated by Rake and calculated per page model -->
   <link rel="canonical" href="$canonical_url$">  
   
-  <!-- Open Graph / Facebook Production Layer -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="$canonical_url$">
-  <meta property="og:title" content="$if(title)$$title$ | RAWWW Engine$else$RAWWW Static Site$endif$">
-  <meta property="og:description" content="Raw Markdown to WWW. A minimalist, high-utility static website engine driven by Ruby, Rake, and Pandoc.">
-  <!-- Clean absolute path pointing straight to the root production banner -->
-  <!-- <meta property="og:image" content="$site_url$$root_path$/og-card.svg"> -->
-  <meta property="og:image" content="$site_url$$root_path$/og-card.png">
-
   <!-- Branding Visual Identities Core Assets -->
   <link rel="icon" type="image/svg+xml" href="$root_path$/favicon.svg">
   <!-- 2. Dynamic root path injection for the master stylesheet -->
@@ -33,20 +24,19 @@
         <div class="site-title-text">
           <!-- 3. Dynamic root path injection for the home link -->
           <a href="$root_path$/index.html">
-            <!-- 4. Dynamic root path injection for the header logo glyph -->
-            <img src="$root_path$/favicon.svg" class="header-divider-icon" alt="RAWWW Logo" style="height: 1.5rem; vertical-align: middle; margin-right: 0.5rem;" />
-            RAWWW
+            <!-- 4. Re-introducing the responsive terminal favicon glyph -->
+            <img src="$root_path$/favicon.svg" class="header-divider-icon" alt="Terminal Prompt Icon" />
+            Nikolai Voinov | Systems & Software Engineer
           </a>
         </div>
       </div>
 
-      <!-- Core site navigation links with injected paths -->
       <nav class="site-nav">
-        <!-- 5. Dynamic root path injection for navigation mapping -->
-        <a href="$root_path$/index.html" class="nav-link">Home</a>
-        <a href="$root_path$/readme.html" class="nav-link">Readme</a>
-        <a href="$root_path$/changelog.html" class="nav-link">Changelog</a>
-        <a href="$root_path$/about.html" class="nav-link">About</a>
+        <span class="nav-prompt">% [</span>
+        <a href="$root_path$/about.html" class="nav-link">about</a>
+        <a href="$root_path$/approach.html" class="nav-link">approach</a>
+        <a href="$root_path$/artifacts.html" class="nav-link">artifacts</a>
+        <span class="nav-bracket">]</span>
       </nav>
     </header>
 
@@ -60,12 +50,11 @@
       $include-before$
     </main>
 
-    <footer>
-      <p>&copy; 2026 $if(author)$$author$$else$RAWWW Developer$endif$. All rights reserved.</p>
-      <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 5px;">
-        Powered by Rake and Pandoc. Clean, minimal, raw web.
-      </p>
+    <footer class="site-footer">
+      <p class="footer-copyright">&copy; 2026 $if(author)$$author$$else$RAWWW Developer$endif$. All rights reserved.</p>
+      <p class="footer-engine">Powered by Rake and Pandoc. Clean, minimal, raw web.</p>
     </footer>
+
   </div>
 </body>
 </html>
