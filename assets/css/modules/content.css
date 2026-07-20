@@ -1,0 +1,112 @@
+/* src/assets/css/modules/content.css - General Markdown Content Layout */
+
+.page-main-body-content {
+  max-width: 46.875rem; /* 750px / 16 */
+  margin: 3rem auto 0 auto;
+  font-family: "Georgia", serif; /* Editorial serif typeface for comfortable long-form reading */
+  color: #222222;
+  line-height: 1.6;
+}
+
+/* Monospace header hierarchy strictly subordinated to the master site title */
+.page-main-body-content h1 {
+  font-family: "Courier New", Courier, monospace; 
+  font-size: 1.15rem;   /* Reduced from 1.25rem to stay visually smaller than the main site title */
+  font-weight: 700;     
+  color: #000000;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-main-body-content h2 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.05rem;   /* Scaled down proportionally */
+  font-weight: 700;
+  color: #000000;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-main-body-content h3 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;   /* Scaled down to match or stay slightly below body text baseline weight */
+  font-weight: 700;
+  color: #222222;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Minimalist blockquotes mapping the native core Markdown syntax */
+.page-main-body-content blockquote {
+  margin: 2rem 0;
+  padding: 0.75rem 1.25rem;
+  border-left: 2px solid #222222; /* High-contrast solid accent line instead of generic web gray */
+  background-color: #fcfbfa;      /* Subtle background tint to isolate philosophical context */
+  font-style: italic;
+}
+
+.page-main-body-content blockquote p {
+  margin: 0;
+  color: #333333;
+}
+
+/* Technical raw list formatting — replacing native web browser bullets with clean text dashes */
+.page-main-body-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 1.5rem;
+}
+
+.page-main-body-content ul li {
+  position: relative;
+  padding-left: 1.25rem; /* Structural clearing for the custom textual dash */
+  margin-bottom: 0.5rem;
+}
+
+.page-main-body-content ul li::before {
+  content: "-"; /* Rigorous plain-text dash placeholder */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Standard ordered lists formatting where numbers remain organic */
+.page-main-body-content ol {
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-main-body-content ol li {
+  margin-bottom: 0.5rem;
+}
+
+/* Technical inline code blocks configuration (Aggressive sharp corners) */
+.page-main-body-content code {
+  font-family: "Courier New", Courier, monospace; /* Unified monospace family aligned with master layout */
+  font-size: 0.9rem;
+  background-color: #ededed;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0; /* Complete engineering brutalism: zero web-smooth roundings */
+  color: #000000;
+}
+
+/* Block code wraps configuration (e.g., ```bash ... ``` or multi-line ASCII architecture blueprints) */
+.page-main-body-content pre {
+  background-color: #ededed;
+  padding: 1.25rem;
+  border-radius: 0; /* Hard 90-degree corners to support raw web aesthetics */
+  overflow-x: auto; 
+  margin-bottom: 2rem;
+  border: 1px dashed #cccccc; /* Emulates edge perforation layout seen on historical printer paper sheets */
+}
+
+.page-main-body-content pre code {
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0;
+  color: inherit;
+}

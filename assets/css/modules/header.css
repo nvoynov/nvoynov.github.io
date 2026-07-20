@@ -1,0 +1,91 @@
+/* src/assets/css/modules/header.css */
+
+.site-header {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  text-align: center;
+  margin-top: 3.75rem;     
+  padding-bottom: 2.5rem;  
+  border-bottom: 1px dashed #cccccc;
+}
+
+/* Micro graphic styling for our custom terminal prompt icon */
+.header-divider-icon {
+  height: 1.1rem;          /* Scaled perfectly to match the font size of the title */
+  width: 1.1rem;           /* Fixed aspect ratio for retinian sharpness */
+  vertical-align: middle;
+  margin-right: 0.65rem;   /* Precise structural gap before the name */
+  margin-top: -2px;        /* Optical alignment correction for monospace baseline */
+  display: inline-block;
+}
+
+/* Master site title: increased scale to absolute priority */
+.site-title .site-title-text {
+  font-family: "Courier New", Courier, monospace; 
+  font-size: 1.25rem;      /* Increased from 1.15rem to dominate the content layer */
+  font-weight: 700;        
+  letter-spacing: 0;        
+  text-transform: none;     
+  color: #000000;          
+  margin: 0 0 1.25rem 0;   
+  line-height: 1.2;
+  display: inline-block;
+}
+
+.site-title a {
+  color: #222222;
+  text-decoration: none;
+}
+
+.site-title a:hover {
+  color: #2c3e50; /* Мягкое подсвечивание при наведении */
+}
+
+/* Навигация: одна сплошная CLI-линия */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+/* Приглашение % [ и закрывающая ] скобка */
+.site-nav .nav-prompt,
+.site-nav .nav-bracket {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #888888;          /* Тусклый цвет для служебных символов */
+  user-select: none;       
+}
+
+/* Точечные, плотные отступы */
+.site-nav .nav-prompt {
+  margin-right: 0.75rem;   /* Скобка стоит близко к первой команде */
+}
+
+.site-nav .nav-bracket {
+  margin-left: 0.25rem;    /* Прижимаем закрывающую скобку после убранного маргина */
+}
+
+/* Команды-ссылки в меню */
+.site-nav a {
+  font-size: 1.1rem;       /* Размер в тон приглашению */
+  font-weight: bold;       
+  letter-spacing: 0;
+  text-transform: lowercase; /* Строго нижний регистр */
+  color: #222222;         
+  text-decoration: none;
+  margin-right: 1.25rem;   /* Ровный шаг между командами */
+  transition: color 0.15s ease;
+}
+
+/* Убираем маргин у последней ссылки, чтобы ] встала вплотную */
+.site-nav a:last-of-type {
+  margin-right: 0;
+}
+
+.site-nav a:hover {
+  color: #2c3e50;
+  background-color: #e5e5e5; /* Эффект выделения текста курсором при наведении */
+}

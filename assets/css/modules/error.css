@@ -1,0 +1,71 @@
+/* src/assets/css/modules/error.css - Technical Monospace Error Page Layout */
+
+/* Target the compiled section explicitly for a dense, terminal-like constraint */
+section.error-page-container {
+  display: block;
+  width: 100%;
+  max-width: 31.25rem; /* Strict 500px for concise text bounding */
+  margin: 5rem auto 0 auto; /* Generous negative space below the main site header */
+  padding: 0 1.5rem; 
+  box-sizing: border-box;
+  text-align: center; /* Center align everything to respect system response anchors */
+  font-family: "Courier New", Courier, monospace; /* Enforce global terminal typeface */
+}
+
+/* Hard-hitting, heavy cryptographic status statement */
+section.error-page-container h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 4rem;        /* Monumental status code scale */
+  font-weight: 700;       /* Maximum terminal visual weight */
+  letter-spacing: 0;      /* Stripped tracking to maintain CLI block density */
+  text-transform: none;
+  color: #000000;         /* Absolute deep black */
+  margin: 0 0 1.5rem 0;
+  line-height: 1;
+}
+
+/* Descriptive system error message emulating a failed shell execution output */
+section.error-page-container p {
+  color: #222222;        
+  font-size: 0.95rem;     /* Aligned with standard system diagnostics output scale */
+  font-weight: bold;
+  line-height: 1.5;     
+  margin-bottom: 2.5rem; 
+  text-align: center;    
+}
+
+/* Inversion of the return link layout to resemble an active executable string */
+section.error-page-container .error-return-link,
+section.error-page-container p a {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;    /* Fluid scaling matching the error body text size */
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: lowercase; /* Unix-style clean path return command */
+  color: #000000;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border: 1px dashed #cccccc; /* Emulates an active structural focus box boundary */
+  transition: color 0.15s ease, background-color 0.15s ease;
+  display: inline-block;
+}
+
+section.error-page-container .error-return-link:hover,
+section.error-page-container p a:hover {
+  color: #2c3e50;
+  background-color: #e5e5e5; /* Text highlighting cursor simulation */
+}
+
+/* ==========================================================================
+   PRODUCTION RESPONSIVE MOBILE DOWNGRADE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 767px) {
+  section.error-page-container {
+    margin-top: 3rem;
+    padding: 0 15px;
+  }
+  
+  section.error-page-container h1 {
+    font-size: 3rem; /* Scaled down for neat fit on mobile screens */
+  }
+}
