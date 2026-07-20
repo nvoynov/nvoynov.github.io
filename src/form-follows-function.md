@@ -1,7 +1,9 @@
 ---
 title: "Meditations: Form Follows Function"
+layout: meditation
 subtitle: "On Architectural Blueprints and Misplaced Sameness"
 date: "July 2026"
+bg_color: "#F2EFF4"
 header-includes:
   - <meta name="robots" content="noindex, nofollow">
 ---
@@ -27,7 +29,7 @@ Long before the industry popularized these terms, the **Entity-Control-Boundary 
 
 1.  **Entities:** The stable, slow-changing domain data and business rules.
 2.  **Controls (Use Cases/Interactors):** The connective tissue implementing specific workflow execution.
-3.  **Boundaries (Adapters):** The volatile, shifting interfaces with the outside world (UI, APIs, CLI, Gateways).
+3.  **Boundaries (Controllers):** The volatile, shifting interfaces with the outside world (UI, APIs, CLI, Gateways).
 
 [ Boundary ] <---> [ Control ] <---> [ Entity ]
 
@@ -35,7 +37,7 @@ A decade later, the enterprise software boom of the 2000s repackaged this realit
 
 [ Presentation ] <---> [ Business Logic ] <---> [ Data Access ]
 
-Whether you look at the client-server monoliths of the past or the decentralized systems of today, the structural mandate has never changed. Uncle Bob’s *Clean Architecture* merely drew concentric circles around this primal trinity; *Hexagonal Architecture* turned it into a polygon. The function remains exactly the same: **protecting the core business logic from the infrastructure noise.**
+Whether you look at the client-server monoliths of the past or the decentralized systems of today, the structural mandate remains. However, the true breakthrough of modern clean paradigms lies in strict **dependency inversion**. Patterns like Uncle Bob’s *Clean Architecture* or *Hexagonal Architecture* do not just draw boundaries; they invert them. By ensuring that ports strictly belong to the core domain, while adapters reside entirely at the periphery, the business logic is decoupled from external delivery mechanisms. The direction of dependency is reversed: infrastructure adapts to the domain, ensuring that the core problem space remains isolated from technological noise.
 
 ---
 
@@ -63,6 +65,16 @@ When mapping out a detailed system design, do not try to invent clever abstracti
 *   Keep your delivery **Boundaries** at the absolute periphery of the system.
 
 We do not build software to showcase our mastery of architectural paradigms. We build it to execute a business function. Understand the ancestral archaeology of your patterns, respect the three layers, and build your rectangles with pragmatic intent.
+
+---
+
+## References
+
+[^1]: **Sullivan, L. H.** (1896). *The Tall Office Building Artistically Considered*. Lippincott's Magazine. (The foundational text introducing the design axiom *"Form Follows Function"*).
+[^2]: **Jacobson, I., Christerson, M., Jonsson, P., & Övergaard, G.** (1992). *Object-Oriented Software Engineering: A Use Case Driven Approach*. ACM Press / Addison-Wesley. (The seminal work that introduced the **Entity-Control-Boundary (ECB)** pattern).
+[^3]: **Wirth, N.** (1976). *Algorithms + Data Structures = Programs*. Prentice-Hall. (The classic text establishing the fundamental decomposition of software code).
+[^4]: **Martin, R. C.** (2017). *Clean Architecture: A Craftsman's Guide to Software Structure and Design*. Prentice-Hall. (Detailing modern dependency inversion, ports, adapters, and the isolation of the core business domain).
+
 
 ---
 `42. Form is temporary. Function is permanent.`

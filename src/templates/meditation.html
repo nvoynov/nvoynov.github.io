@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="$if(lang)$$lang$$else$en$endif$">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>$if(title)$$title$$else$Meditation$endif$</title>
+  $if(description)$<meta name="description" content="$description$">$endif$
+  <link rel="icon" type="image/svg+xml" href="$root_path$/favicon.svg">
+  
+  <!-- Master layouts and the new isolation layer overrides -->
+  <link rel="stylesheet" href="$root_path$/assets/css/style.css">
+  <link rel="stylesheet" href="$root_path$/assets/css/modules/meditation-isolation.css">
+  
+  $if(header-includes)$
+  $header-includes$
+  $endif$
+  
+  <!-- Dynamic inline ambient inject -->
+  <style>
+    body.meditation-ambient {
+      background-color: $if(bg_color)$$bg_color$$else$#F5F4F0$endif$;
+      transition: background-color 1.5s ease-in-out; /* Smooth fade-in on transition */
+    }
+  </style>
+</head>
+
+<body class="meditation-ambient">
+  <div class="meditation-container-isolated">
+    
+    <!-- No global header. Execution starts directly with the entry point -->
+    <main class="meditation-content-isolated">
+      $body$
+    </main>
+
+    <!-- Refined architectural footer -->
+    <footer class="meditation-footer-isolated">
+      <p class="meditation-copyright">&copy; 2026 Nikolai Voinov. All rights reserved.</p>
+      <div class="meditation-return-zone">
+        <a href="$root_path$/index.html" class="meditation-back-link">&larr; return to main</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
+

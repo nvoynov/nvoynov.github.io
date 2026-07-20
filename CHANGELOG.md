@@ -1,3 +1,9 @@
+## [0.2.0] - 2026-07-20
+
+- added meditation layout
+- fixed form-follows-function by adding dependency inversion
+- added REVIEW.md
+
 ## [Unreleased]
 
 - change citations style

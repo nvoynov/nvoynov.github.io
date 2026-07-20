@@ -1,0 +1,80 @@
+/* src/assets/css/modules/meditation-isolation.css - Disturb-Free Layout */
+
+/* Override master frames and establish text centering weight */
+.meditation-container-isolated {
+  max-width: 42rem; /* Reduced to strict 670px for ultimate reading comfort */
+  margin: 6rem auto 4rem auto; /* Deep top margins to simulate standard book layouts */
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Pure editorial typography layer overrides */
+.meditation-content-isolated {
+  font-family: "Georgia", serif;
+  color: #1a1a1a; /* Soft charcoal for less eye strain */
+  line-height: 1.75; /* Slightly wider spacing for slow-paced comprehension */
+}
+
+/* Titles cease to be technical or monospace */
+.meditation-content-isolated h1 {
+  font-family: "Georgia", serif;
+  font-size: 1.85rem; /* Large elegant focal point */
+  font-weight: 400;   /* Editorial light-regular weight */
+  font-style: italic; /* Graceful academic character */
+  color: #000000;
+  margin-bottom: 3rem; /* Breathing room before the text sequence */
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+/* Soft inline modifications for subheaders */
+.meditation-content-isolated h2,
+.meditation-content-isolated h3 {
+  font-family: "Georgia", serif;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Minimalist blockquotes update */
+.meditation-content-isolated blockquote {
+  margin: 2.5rem 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 1px solid #444444; /* Razor thin accent line */
+  background-color: transparent; /* Blends natively into the dynamic background */
+  font-style: italic;
+}
+
+/* Muted copyright footprint */
+.meditation-footer-isolated {
+  margin-top: 6rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06); /* Nearly invisible divider */
+  font-family: "Georgia", serif;
+  text-align: center;
+}
+
+.meditation-footer-isolated .meditation-copyright {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #666666;
+  margin: 0 0 1.5rem 0;
+}
+
+/* Non-technical soft navigational return link */
+.meditation-return-zone {
+  margin-top: 1rem;
+}
+
+.meditation-return-zone .meditation-back-link {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.meditation-return-zone .meditation-back-link:hover {
+  color: #888888; /* Soft fading effect upon interaction */
+}
